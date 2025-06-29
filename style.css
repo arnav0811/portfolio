@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    line-height: 1.65;
+    color: #2c2c2c;
+    background: #fefefe;
+    font-size: 17px;
+}
+
+.container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    min-height: 100vh;
+}
+
+/* Header Section - Desktop Layout */
+.header {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.header-content {
+    flex: 1;
+}
+
+.name {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    color: #5a5a5a;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* Current Work */
+.current-work {
+    font-size: 1.05rem;
+    color: #3a3a3a;
+    line-height: 1.7;
+    margin-bottom: 4rem;
+}
+
+.current-work a {
+    color: #1a1a1a;
+    text-decoration: underline;
+    text-decoration-color: #ccc;
+}
+
+.current-work a:hover {
+    text-decoration-color: #666;
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+    letter-spacing: -0.3px;
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    margin-top: 0;
+}
+
+/* Blog Posts */
+.blog-posts {
+    display: grid;
+    gap: 2rem;
+}
+
+.blog-post {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.blog-post:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.blog-post-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.blog-post-title a {
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.blog-post-title a:hover {
+    text-decoration: underline;
+    text-decoration-color: #666;
+}
+
+.blog-post-excerpt {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.blog-post-date {
+    color: #999;
+    font-size: 0.85rem;
+}
+
+/* Research */
+.research {
+    display: grid;
+    gap: 2rem;
+}
+
+.research-item {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.research-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.research-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+}
+
+.research-description {
+    color: #5a5a5a;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.research-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.research-links a {
+    color: #1a1a1a;
+    text-decoration: underline;
+    text-decoration-color: #ccc;
+    font-size: 0.9rem;
+}
+
+.research-links a:hover {
+    text-decoration-color: #666;
+}
+
+/* Projects */
+.projects {
+    display: grid;
+    gap: 2rem;
+}
+
+.project {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.project:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.project-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+}
+
+.project-description {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.project-links a {
+    color: #1a1a1a;
+    text-decoration: underline;
+    text-decoration-color: #ccc;
+    font-size: 0.9rem;
+}
+
+.project-links a:hover {
+    text-decoration-color: #666;
+}
+
+/* Interests */
+.interests {
+    margin-bottom: 4rem;
+}
+
+.interests-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+    letter-spacing: -0.3px;
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.interests-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.interest-item {
+    color: #5a5a5a;
+    font-size: 0.95rem;
+}
+
+.interest-item:not(:last-child)::after {
+    content: " •";
+    color: #bbb;
+    margin-left: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e8e8e8;
+    text-align: center;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+
+.footer-link:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.footer-icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 3rem 1.5rem;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .name {
+        font-size: 1.9rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .section {
+        margin-bottom: 3rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .current-work {
+        margin-bottom: 3rem;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        max-width: 200px;
+    }
+
+    .interests-grid {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 2rem 1rem;
+    }
+
+    .name {
+        font-size: 1.7rem;
+    }
+
+    .project-links,
+    .research-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
