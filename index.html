@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arnav Mardia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./images/gt.png" type="image/png">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPFB54EPV1"></script>
@@ -13,259 +16,301 @@
       gtag('js', new Date());
       gtag('config', 'G-MPFB54EPV1');
     </script>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <div class="profile-section">
-                <img src="./images/profile.jpeg" alt="Your Name" class="profile-image">
-                <h1 class="name">Arnav Mardia</h1>
-            </div>
-            <nav class="nav-menu">
-                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#background" class="nav-link">Background</a></li>
-                <li class="nav-item"><a href="#writing" class="nav-link">Writing</a></li>
-                <li class="nav-item"><a href="#research" class="nav-link">Research</a></li>
-                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-                <li class="nav-item"><a href="#interests" class="nav-link">Interests</a></li>
+    <div class="page">
+        <header class="site-header">
+            <h1 class="site-title">Arnav Mardia</h1>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#blog" class="nav-link" data-section="blog">Blog</a>
+                <a href="#research" class="nav-link" data-section="research">Research</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
             </nav>
-        </aside>
+        </header>
 
-        <main class="main-content">
-            <section id="about">
-                <div class="current-work">
-                    Hello! I'm a Master's student at Georgia Tech advised by <a href="https://bo-dai.github.io/" target="_blank">Prof. Bo Dai</a>. My research currently lies in Long Context Modeling and Reinforcement Learning.
-            </section>
+        <div class="divider" aria-hidden="true"></div>
 
-            <section id="background" class="background">
-                <h2 class="background-title">Background</h2>
-                <div class="background-items">
-                    <div class="background-item">
-                        <h3 class="background-item-title">Education</h3>
-                        <p class="background-item-description">
-                            Computer Science and Mathematics at Georgia Tech. Focused on Machine Learning and Mathematical Modeling.
-                        </p>
+        <main class="panels">
+            <section id="about" class="panel" aria-labelledby="about-title">
+                <h2 class="panel-title" id="about-title">About</h2>
+                <div class="panel-body">
+                    <div class="about-header">
+                        <img src="./images/profile.jpeg" alt="Arnav Mardia" class="about-photo">
+                        <div class="about-summary">
+                            <p class="current-work">
+                                Hello! I'm a Master's student at Georgia Tech advised by <a href="https://bo-dai.github.io/" target="_blank">Prof. Bo Dai</a>. My research currently lies in Long Context Modeling and Reinforcement Learning.
+                            </p>
+                        </div>
                     </div>
-                    <div class="background-item">
-                        <h3 class="background-item-title">Recent Past</h3>
-                        <p class="background-item-description">
-                            Most recently I led the software stack at <a href="https://swishrobotics.com" target="_blank">Swish Robotics</a>. Prior to that I worked on Fraud Detection Models and Infrastructure at Credit Karma and Point of Sale (PoS) systems at NCR. Indian National Math Olympiad finalist and a Top 300 rank on the Putnam Math Contest.
-                        </p>
+                    <div class="background-items">
+                        <div class="background-item">
+                            <h3 class="background-item-title">Education</h3>
+                            <p class="background-item-description">
+                                Computer Science and Mathematics at Georgia Tech. Focused on Machine Learning and Mathematical Modeling.
+                            </p>
+                        </div>
+                        <div class="background-item">
+                            <h3 class="background-item-title">Recent Past</h3>
+                            <p class="background-item-description">
+                                Most recently I led the software stack at <a href="https://swishrobotics.com" target="_blank">Swish Robotics</a>. Prior to that I worked on Fraud Detection Models and Infrastructure at Credit Karma and Point of Sale (PoS) systems at NCR. Indian National Math Olympiad finalist and a Top 300 rank on the Putnam Math Contest.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section id="writing" class="section">
-                <h2 class="section-title">Writing</h2>
-                <div class="blog-posts">
-                    <article class="blog-post">
-                        <h3 class="blog-post-title">
-                            <a href="https://arnavmardia.substack.com/p/the-art-of-translation" target="_blank">
-                                The Art of Translation
-                            </a>
-                        </h3>
-                        <p class="blog-post-excerpt">
-                            What if your model could just look where it needed to? Exploring attention mechanisms in sequence-to-sequence learning and how they revolutionize machine translation.
-                        </p>
-                        <div class="blog-post-meta">
-                            <span class="blog-post-date">15th June 2025</span>
-                            <a href="https://arnavmardia.substack.com/p/the-art-of-translation" target="_blank" class="blog-post-read-more">
-                                Read more →
-                            </a>
-                        </div>
-                    </article>
-                    <article class="blog-post">
-                        <h3 class="blog-post-title">
-                            <a href="https://arnavmardia.substack.com/p/flash-attention" target="_blank">
-                                Flash and Furious
-                            </a>
-                        </h3>
-                        <p class="blog-post-excerpt">
-                            Benchmarking Flash Attention v1 and v2 in Triton against a naive PyTorch implementation of Scaled Dot Product Attention and Multi Headed Attention.
-                        </p>
-                        <div class="blog-post-meta">
-                            <span class="blog-post-date">9th July 2025</span>
-                            <a href="https://arnavmardia.substack.com/p/flash-attention" target="_blank" class="blog-post-read-more">
-                                Read more →
-                            </a>
-                        </div>
-                    </article>
-                    <article class="blog-post">
-                        <h3 class="blog-post-title">
-                            <a href="https://arnavmardia.substack.com/p/the-last-pull" target="_blank">
-                                The Last Pull
-                            </a>
-                        </h3>
-                        <p class="blog-post-excerpt">
-                            The Exploration vs. Exploitation Dilemma and a brief introduction to Reinforcement Learning
-                        </p>
-                        <div class="blog-post-meta">
-                            <span class="blog-post-date">24th July 2025</span>
-                            <a href="https://arnavmardia.substack.com/p/the-last-pull" target="_blank" class="blog-post-read-more">
-                                Read more →
-                            </a>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section id="research" class="section">
-                <h2 class="section-title">Research</h2>
-                <div class="research">
-                    <div class="research-item">
-                        <h3 class="research-title">Research Assistant advised by <a href="https://bo-dai.github.io/" target="_blank">Prof. Bo Dai</a>
-                        <p class="research-description">
-                            Working on long-context models and memory agents 
-                        </p>
-                    </div>
-                    <div class="research-item">
-                        <h3 class="research-title">Undergraduate Research at the <a href="https://friendlycities.gatech.edu/" target="_blank">Friendly Cities Lab</a></h3>
-                        <p class="research-description">
-                            Worked with <a href="https://www.cc.gatech.edu/people/clio-andris" target="_blank">Prof. Clio Andris</a> on geographic visualizations and spatial information theory. 
-                        </p>
-                    </div>
-                    <div class="research-item">
-                        <h3 class="research-title">The Senator's Problem</h3>
-                        <p class="research-description">
-                            A Design Space of Node Placement Methods for Geospatial Network Visualizations. 
-                        </p>
-                        <div class="research-meta">
-                            <div class="research-links">
-                                <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol315-cosit2024/LIPIcs.COSIT.2024.19/LIPIcs.COSIT.2024.19.pdf" target="_blank">
-                                    📄 Read paper →
+            <section id="blog" class="panel" aria-labelledby="blog-title" hidden>
+                <h2 class="panel-title" id="blog-title">Blog</h2>
+                <div class="panel-body section">
+                    <div class="blog-posts">
+                        <article class="blog-post">
+                            <h3 class="blog-post-title">
+                                <a href="https://arnavmardia.substack.com/p/the-art-of-translation" target="_blank">
+                                    The Art of Translation
                                 </a>
+                            </h3>
+                            <p class="blog-post-excerpt">
+                                What if your model could just look where it needed to? Exploring attention mechanisms in sequence-to-sequence learning and how they revolutionize machine translation.
+                            </p>
+                            <div class="blog-post-meta">
+                                <span class="blog-post-date">15th June 2025</span>
+                                <a href="https://arnavmardia.substack.com/p/the-art-of-translation" target="_blank" class="blog-post-read-more">
+                                    Read more →
+                                </a>
+                            </div>
+                        </article>
+                        <article class="blog-post">
+                            <h3 class="blog-post-title">
+                                <a href="https://arnavmardia.substack.com/p/flash-attention" target="_blank">
+                                    Flash and Furious
+                                </a>
+                            </h3>
+                            <p class="blog-post-excerpt">
+                                Benchmarking Flash Attention v1 and v2 in Triton against a naive PyTorch implementation of Scaled Dot Product Attention and Multi Headed Attention.
+                            </p>
+                            <div class="blog-post-meta">
+                                <span class="blog-post-date">9th July 2025</span>
+                                <a href="https://arnavmardia.substack.com/p/flash-attention" target="_blank" class="blog-post-read-more">
+                                    Read more →
+                                </a>
+                            </div>
+                        </article>
+                        <article class="blog-post">
+                            <h3 class="blog-post-title">
+                                <a href="https://arnavmardia.substack.com/p/the-last-pull" target="_blank">
+                                    The Last Pull
+                                </a>
+                            </h3>
+                            <p class="blog-post-excerpt">
+                                The Exploration vs. Exploitation Dilemma and a brief introduction to Reinforcement Learning
+                            </p>
+                            <div class="blog-post-meta">
+                                <span class="blog-post-date">24th July 2025</span>
+                                <a href="https://arnavmardia.substack.com/p/the-last-pull" target="_blank" class="blog-post-read-more">
+                                    Read more →
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="research" class="panel" aria-labelledby="research-title" hidden>
+                <h2 class="panel-title" id="research-title">Research</h2>
+                <div class="panel-body section">
+                    <div class="research">
+                        <div class="research-item">
+                            <h3 class="research-title">Research Assistant advised by <a href="https://bo-dai.github.io/" target="_blank">Prof. Bo Dai</a></h3>
+                            <p class="research-description">
+                                Working on long-context models and memory agents 
+                            </p>
+                        </div>
+                        <div class="research-item">
+                            <h3 class="research-title">Undergraduate Research at the <a href="https://friendlycities.gatech.edu/" target="_blank">Friendly Cities Lab</a></h3>
+                            <p class="research-description">
+                                Worked with <a href="https://www.cc.gatech.edu/people/clio-andris" target="_blank">Prof. Clio Andris</a> on geographic visualizations and spatial information theory. 
+                            </p>
+                        </div>
+                        <div class="research-item">
+                            <h3 class="research-title">The Senator's Problem</h3>
+                            <p class="research-description">
+                                A Design Space of Node Placement Methods for Geospatial Network Visualizations. 
+                            </p>
+                            <div class="research-meta">
+                                <div class="research-links">
+                                    <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol315-cosit2024/LIPIcs.COSIT.2024.19/LIPIcs.COSIT.2024.19.pdf" target="_blank">
+                                        📄 Read paper →
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="projects" class="section">
-                <h2 class="section-title">Projects</h2>
-                <div class="projects">
-                    <div class="project">
-                        <h3 class="project-title">LoRA x Distillation</h3>
-                        <p class="project-description">
-                            Implemented LoRA adapters on a 7B Mistral Model and distilled into a smaller student.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/arnav0811/lora-distillation" target="_blank">
-                                <svg class="link-icon" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                GitHub
-                            </a>
+            <section id="projects" class="panel" aria-labelledby="projects-title" hidden>
+                <h2 class="panel-title" id="projects-title">Projects</h2>
+                <div class="panel-body section">
+                    <div class="projects">
+                        <div class="project">
+                            <h3 class="project-title">LoRA x Distillation</h3>
+                            <p class="project-description">
+                                Implemented LoRA adapters on a 7B Mistral Model and distilled into a smaller student.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/arnav0811/lora-distillation" target="_blank">
+                                    <svg class="link-icon" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="project">
-                        <h3 class="project-title">Flash Attention</h3>
-                        <p class="project-description">
-                            Benchmarking Flash Attention v1 and v2 in Triton against a naive PyTorch implementation of Scaled Dot Product Attention and Multi Headed Attention.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/arnav0811/flash-attention" target="_blank">
-                                <svg class="link-icon" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                GitHub
-                            </a>
-                            <a href="https://arnavmardia.substack.com/p/flash-attention" target="_blank">
-                                📝 Blog
-                            </a>
+                        <div class="project">
+                            <h3 class="project-title">Flash Attention</h3>
+                            <p class="project-description">
+                                Benchmarking Flash Attention v1 and v2 in Triton against a naive PyTorch implementation of Scaled Dot Product Attention and Multi Headed Attention.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/arnav0811/flash-attention" target="_blank">
+                                    <svg class="link-icon" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                                <a href="https://arnavmardia.substack.com/p/flash-attention" target="_blank">
+                                    📝 Blog
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="project">
-                        <h3 class="project-title">Sequence-to-Sequence Learning with Bahdanau Attention</h3>
-                        <p class="project-description">
-                            Trained a sequence-to-sequence model with and without the attention mechanism to translate natural language to Python snippets.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/arnav0811/seq2seq" target="_blank">
-                                <svg class="link-icon" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                            <a href="https://arnavmardia.substack.com/p/the-art-of-translation" target="_blank">
-                                📝 Blog
-                            </a>
+                        <div class="project">
+                            <h3 class="project-title">Sequence-to-Sequence Learning with Bahdanau Attention</h3>
+                            <p class="project-description">
+                                Trained a sequence-to-sequence model with and without the attention mechanism to translate natural language to Python snippets.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/arnav0811/seq2seq" target="_blank">
+                                    <svg class="link-icon" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://arnavmardia.substack.com/p/the-art-of-translation" target="_blank">
+                                    📝 Blog
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="project">
-                        <h3 class="project-title">Tensor Processing Unit (TPUs) in SystemVerilog</h3>
-                        <p class="project-description">
-                            Replicating the Google TPU V1 paper on a small scale in SystemVerilog.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/arnav0811/tpu" target="_blank">
-                                <svg class="link-icon" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
+                        <div class="project">
+                            <h3 class="project-title">Tensor Processing Unit (TPUs) in SystemVerilog</h3>
+                            <p class="project-description">
+                                Replicating the Google TPU V1 paper on a small scale in SystemVerilog.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/arnav0811/tpu" target="_blank">
+                                    <svg class="link-icon" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-
-            <section id="interests" class="interests">
-                <h2 class="interests-title">Other interests</h2>
-                <div class="interests-grid">
-                    <span class="interest-item">College Sports</span>
-                    <span class="interest-item">Swimming</span>
-                    <span class="interest-item">Cricket</span>
-                </div>
-            </section>
-
-            <footer class="footer">
-                <div class="footer-links">
-                    <a href="https://x.com/MardiaArnav" target="_blank" class="footer-link">
-                        <svg class="footer-icon" viewBox="0 0 24 24">
-                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                        </svg>
-                        Twitter
-                    </a>
-
-                    <a href="https://arnavmardia.substack.com" target="_blank" class="footer-link">
-                        <svg class="footer-icon" viewBox="0 0 24 24">
-                            <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
-                        </svg>
-                        Substack
-                    </a>
-
-                    <a href="https://github.com/arnav0811" target="_blank" class="footer-link">
-                        <svg class="footer-icon" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/arnavmardia/" target="_blank" class="footer-link">
-                        <svg class="footer-icon" viewBox="0 0 24 24">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                        LinkedIn
-                    </a>
-
-                    <a href="https://scholar.google.com/citations?user=arnavmardia&user=wulATy0AAAAJ" target="_blank" class="footer-link">
-                        <svg class="footer-icon" viewBox="0 0 24 24">
-                            <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
-                        </svg>
-                        Scholar
-                    </a>
-
-                    <a href="mailto:mardiaarnav@gatech.edu" class="footer-link">
-                        <svg class="footer-icon" viewBox="0 0 24 24">
-                            <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/>
-                            <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/>
-                        </svg>
-                        Email
-                    </a>
-                </div>
-            </footer>
         </main>
+
+        <footer class="site-footer">
+            <div class="footer-links">
+                <a href="https://x.com/MardiaArnav" target="_blank" class="footer-link">
+                    <svg class="footer-icon" viewBox="0 0 24 24">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                    Twitter
+                </a>
+                <a href="https://arnavmardia.substack.com" target="_blank" class="footer-link">
+                    <svg class="footer-icon" viewBox="0 0 24 24">
+                        <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
+                    </svg>
+                    Substack
+                </a>
+                <a href="https://github.com/arnav0811" target="_blank" class="footer-link">
+                    <svg class="footer-icon" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/arnavmardia/" target="_blank" class="footer-link">
+                    <svg class="footer-icon" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+                <a href="https://scholar.google.com/citations?user=arnavmardia&user=wulATy0AAAAJ" target="_blank" class="footer-link">
+                    <svg class="footer-icon" viewBox="0 0 24 24">
+                        <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
+                    </svg>
+                    Scholar
+                </a>
+                <a href="mailto:mardiaarnav@gatech.edu" class="footer-link">
+                    <svg class="footer-icon" viewBox="0 0 24 24">
+                        <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/>
+                        <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/>
+                    </svg>
+                    Email
+                </a>
+            </div>
+        </footer>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const panels = Array.from(document.querySelectorAll('.panel'));
+            const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+            const panelMap = new Map(panels.map(panel => [panel.id, panel]));
+            const defaultId = 'about';
+
+            function showPanel(id, scroll = false) {
+                panelMap.forEach((panel, panelId) => {
+                    panel.hidden = panelId !== id;
+                });
+
+                navLinks.forEach(link => {
+                    const target = link.dataset.section;
+                    const active = target === id;
+                    link.classList.toggle('active', active);
+                    if (active) {
+                        link.setAttribute('aria-current', 'page');
+                    } else {
+                        link.removeAttribute('aria-current');
+                    }
+                });
+
+                if (panelMap.has(id)) {
+                    const hash = `#${id}`;
+                    history.replaceState(null, '', hash);
+                    if (scroll) {
+                        panelMap.get(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', event => {
+                    const id = link.dataset.section;
+                    if (!panelMap.has(id)) {
+                        return;
+                    }
+                    event.preventDefault();
+                    showPanel(id, true);
+                });
+            });
+
+            const initial = window.location.hash.slice(1);
+            if (initial && panelMap.has(initial)) {
+                showPanel(initial);
+            } else {
+                showPanel(defaultId);
+            }
+        });
+    </script>
 </body>
 </html>
